@@ -1,10 +1,12 @@
 import React, { useMemo, useState } from "react";
+import NextLink from "next/link";
 import {
   Box,
   Card,
   CardActionArea,
   CardMedia,
   Grid,
+  Link,
   Typography,
 } from "@mui/material";
 
@@ -25,15 +27,24 @@ const ProductCard = ({ product }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Card>
-        <CardActionArea>
-          <CardMedia
-            component={"img"}
-            image={productImage}
-            alt={product.title}
-            className="fadeIn"
-            // onLoad={()=>}
-          />
-        </CardActionArea>
+        <NextLink
+          href={`/product/${product.slug}`}
+          passHref
+          legacyBehavior
+          prefetch={false}
+        >
+          <Link>
+            <CardActionArea>
+              <CardMedia
+                component={"img"}
+                image={productImage}
+                alt={product.title}
+                className="fadeIn"
+                // onLoad={()=>}
+              />
+            </CardActionArea>
+          </Link>
+        </NextLink>
       </Card>
       <Box sx={{ mt: 1 }} className="fadeIn">
         <Typography fontWeight={700}>{product.title}</Typography>

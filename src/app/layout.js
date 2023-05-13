@@ -16,9 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider theme={lightTheme}>
         <body className={inter.className}>
-          <h1>Navbar</h1>
-          {children}
-          <h1>Footer</h1>
+         {children}
         </body>
       </ThemeProvider>
     </html>

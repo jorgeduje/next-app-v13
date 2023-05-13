@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../ui/Navbar";
+import SideMenu from "../ui/SideMenu";
 
 const ShopLayout = ({ children, title, pageDescription, imageFullUrl }) => {
   return (
@@ -15,7 +16,7 @@ const ShopLayout = ({ children, title, pageDescription, imageFullUrl }) => {
       <nav>
         <Navbar />
       </nav>
-
+      <SideMenu />
       <main
         style={{
           margin: "80px auto",

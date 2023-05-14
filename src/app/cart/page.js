@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-export default function page() {
+export default function CartPage() {
   return (
     <ShopLayout title="Carrito" pageDescription={"carrito de compras"}>
       <Typography variant="h1" component="h1">

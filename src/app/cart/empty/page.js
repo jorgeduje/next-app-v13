@@ -4,7 +4,7 @@ import ShopLayout from "@/components/layouts/ShopLayout";
 import { Link, Typography } from "@mui/material";
 import NextLink from "next/link";
 
-export default function page() {
+export default function CartEmptyPage() {
   return (
     <ShopLayout
       title="Carrito vacío"

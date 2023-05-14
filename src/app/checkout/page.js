@@ -3,7 +3,7 @@
 import ShopLayout from "@/components/layouts/ShopLayout";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 
-export default function page() {
+export default function CheckoutPage() {
   return (
     <ShopLayout title="checkout" pageDescription={"formulario de compra"}>
       <Typography variant="h5">Formulario de compra</Typography>

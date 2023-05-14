@@ -5,10 +5,12 @@ import { Box, Button, Chip, Grid, Typography } from "@mui/material";
 import { useParams } from "next/navigation";
 import ProductSlideshow from "@/components/products/ProductSlideshow";
 import ShopLayout from "@/components/layouts/ShopLayout";
+import ItemCounter from "@/components/ui/ItemCounter";
+import SizeSelector from "@/components/products/SizeSelector";
 
 const product = initialData.products[0];
 
-const ProductDetail = () => {
+export default function ProductDetail() {
   const { slug } = useParams();
   console.log(slug);
   return (
@@ -22,12 +24,15 @@ const ProductDetail = () => {
         </Grid>
         <Grid item xs={12} sm={5}>
           <Box display={"flex"} flexDirection={"column"}>
-            {/* Title */}
             <Typography variant="h1">{product.title}</Typography>
-            {/* Price */}
-            <Typography variant="subtitle1">${product.title}</Typography>
+            <Typography variant="subtitle1">${product.price}</Typography>
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Cantidad</Typography>
+              <ItemCounter />
+              <SizeSelector
+                sizes={product.sizes}
+                // selectedSize={product.sizes[3]}
+              />
             </Box>
 
             <Button color="secondary" className="circular-btn">
@@ -45,6 +50,4 @@ const ProductDetail = () => {
       </Grid>
     </ShopLayout>
   );
-};
-
-export default ProductDetail;
+}

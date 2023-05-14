@@ -18,15 +18,17 @@ const Navbar = () => {
       <Toolbar>
         <NextLink href={"/"} passHref legacyBehavior>
           <Link display={"flex"} alignItems={"center"}>
-            <Typography variant="h6">Teslo |</Typography>
+            <Typography variant="h6">Teslo</Typography>
             <Typography sx={{ ml: 0.5 }}>Shop</Typography>
           </Link>
         </NextLink>
 
         <Box flex={1}></Box>
-        <Box sx={{
-          display: {xs: "none", sm: "block"}
-        }}>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "block" },
+          }}
+        >
           <NextLink href={"category/men"} passHref legacyBehavior>
             <Link>
               <Button>Hombres</Button>
